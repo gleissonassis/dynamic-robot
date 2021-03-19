@@ -1,12 +1,12 @@
 const express = require('express');
 const axios = require('axios').default;
 const Jimp = require('jimp');
+const cors = require('cors');
 
 const app = express();
+app.use(cors()); 
 
 const port = process.env.PORT || 3000;
-
-
 
 app.get('/:stars/:name', async (req, res) => {
     try {
